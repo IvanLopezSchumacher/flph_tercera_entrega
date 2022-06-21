@@ -1,0 +1,83 @@
+$primary-color: #7858A6;
+$p-color: #dadada;
+$p-grey: #7B7B7B;
+
+.footer {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 2rem;
+}
+
+$style_footer_one: (
+    font-family: 'Roboto',
+    font-weight-strong: 700,
+    font-size-2: 2rem,
+    color-primary: #7858A6,
+);
+
+$style_footer_two: (
+    font-weight-air: 400,
+    font-size-1: 1rem,
+    color-p: #dadada,
+);
+
+$merged: map-merge($style_footer_one, $style_footer_two);
+
+.footer__logo{
+    h3 {
+    font-family: map-get($merged, font-family);
+    font-weight: map-get($merged, font-weight-strong);
+    font-size: map-get($merged, font-size-2);
+    color: map-get($merged, color-primary);
+    }
+}
+
+.footer__content{
+    h5 {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 1rem;
+    color: $p-color;
+    }
+}
+
+.footer__content{
+    a {
+    text-decoration: none;
+    color: $p-color;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 1rem;
+    }
+}
+
+.footer__content{
+    ul, li {
+    list-style-type: none;
+    }
+    a{
+        &:hover{
+            color: $primary-color;
+            transition: .3s;
+        }
+    }
+}
+
+.footer__terms a {
+    color: $p-grey;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 1rem;
+    text-decoration: none;
+
+    &:hover{
+        color: $primary-color;
+        transition: .3s;
+    }
+}

@@ -1,0 +1,25 @@
+$primary-color: #7858A6;
+$p-color: #dadada;
+
+.successful {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+
+    .successful__card {
+        text-align: center;
+
+        h4{
+            color: $primary-color;
+            font-size: 4rem;
+            font-weight: 700;
+        }
+
+        h5{
+            font-weight: 500;
+        }
+    }
+
+}
